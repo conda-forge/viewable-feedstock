@@ -1,11 +1,11 @@
-About viewable
-==============
+About viewable-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/viewable-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pyrustic/viewable
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/viewable-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python library to implement a GUI view with lifecycle
 
