@@ -1,5 +1,5 @@
 {% set name = "viewable" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/viewable-{{ version }}.tar.gz
-  sha256: 76fc71d416aa13bca84fe23cff197d5529acaee6ac7a1f3823dc3e169e7395d5
+  sha256: 95e84d6fd6287a980a8370d7ce23df341e347cc3741fa73c1a11509fa77e9d3b
 
 build:
   entry_points:
