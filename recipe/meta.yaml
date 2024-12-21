@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/viewable-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/viewable-{{ version }}.tar.gz
   sha256: 95e84d6fd6287a980a8370d7ce23df341e347cc3741fa73c1a11509fa77e9d3b
 
 build:
@@ -14,14 +14,14 @@ build:
     - viewable = viewable.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - tkutil
 
 test:
@@ -32,6 +32,7 @@ test:
     - xvfb-run --auto-servernum bash -c 'viewable' &  # [unix]
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyrustic/viewable
